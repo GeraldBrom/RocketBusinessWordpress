@@ -30,9 +30,19 @@ get_header(); ?>
                                 
                                 <h2 class="rb-article-item__title"><?php echo esc_html($article->post_title); ?></h2>
                                 
-                                <?php if ($article->post_excerpt) : ?>
-                                    <p class="rb-article-item__description"><?php echo esc_html($article->post_excerpt); ?></p>
-                                <?php endif; ?>
+                                <?php 
+                                // Получаем отрывок или генерируем его из содержимого
+                                $excerpt = $article->post_excerpt;
+                                if (empty($excerpt)) {
+                                    // Убираем HTML теги и обрезаем до 150 символов
+                                    $excerpt = wp_strip_all_tags($article->post_content);
+                                    $excerpt = substr($excerpt, 0, 150);
+                                    if (strlen($excerpt) == 150) {
+                                        $excerpt .= '...';
+                                    }
+                                }
+                                ?>
+                                <p class="rb-article-item__description"><?php echo esc_html($excerpt); ?></p>
                                 
                                 <p class="rb-article-item__date"><?php echo esc_html(get_the_date('', $article->ID)); ?></p>
                             </a>
@@ -41,7 +51,6 @@ get_header(); ?>
                     endforeach;
                     wp_reset_postdata();
                 else :
-                    // Fallback контент для статей
                     $fallback_articles = [
                         [
                             'title' => 'Добро пожаловать в RocketBusiness',
@@ -123,7 +132,6 @@ get_header(); ?>
                     endforeach;
                     wp_reset_postdata();
                 else :
-                    // Fallback контент для услуг
                     $fallback_services = [
                         [
                             'title' => 'Бизнес-консультации',
@@ -183,7 +191,7 @@ get_header(); ?>
         <div class="rb-contact-form">
             <h1 class="rb-contact-form__title">Свяжитесь с нами</h1>
             <div class="rb-contact-form__container">
-                <?php echo do_shortcode('[wpforms id="30" title="false"]'); ?>
+                <?php echo do_shortcode('[wpforms id="5" title="false"]'); ?>
             </div>
         </div>
         

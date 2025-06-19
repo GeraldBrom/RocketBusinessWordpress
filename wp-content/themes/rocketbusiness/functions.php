@@ -107,12 +107,10 @@ add_action('widgets_init', 'rocketbusiness_widgets_init');
  * Подключение стилей и скриптов
  */
 function rocketbusiness_scripts() {
-    wp_enqueue_style('rocketbusiness-style', get_stylesheet_uri(), [], wp_get_theme()->get('Version'));
+    wp_enqueue_style('rocketbusiness-style', get_stylesheet_uri(), [], time());
 
     wp_enqueue_style('rocketbusiness-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', [], null);
 
-    wp_enqueue_script('rocketbusiness-navigation', get_template_directory_uri() . '/js/navigation.js', [], wp_get_theme()->get('Version'), true);
-    
     wp_enqueue_script('rocketbusiness-slider', get_template_directory_uri() . '/assets/js/slider.js', [], wp_get_theme()->get('Version'), true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
