@@ -40,36 +40,13 @@ get_header(); ?>
                         <?php
                     endforeach;
                     wp_reset_postdata();
-                else :
-                    ?>
-                    <div class="rb-article-item">
-                        <?php rocketbusiness_display_image('post1.png', 'Статья 1', 'rb-article-item__image'); ?>
-                        <h2 class="rb-article-item__title">Февральское поступление товара и актуальные скидки</h2>
-                        <p class="rb-article-item__description">Экономьте на ремонте своего автомобиля, не упуская выгодных возможностей</p>
-                        <p class="rb-article-item__date">2024-01-01</p>
-                    </div>
-                    <div class="rb-article-item">
-                        <?php rocketbusiness_display_image('post2.png', 'Статья 2', 'rb-article-item__image'); ?>
-                        <h2 class="rb-article-item__title">Январское поступление товара и актуальные скидки</h2>
-                        <p class="rb-article-item__description">Экономьте на ремонте своего автомобиля, не упуская выгодных возможностей</p>
-                        <p class="rb-article-item__date">2024-01-01</p>
-                    </div>
-                    <div class="rb-article-item">
-                        <?php rocketbusiness_display_image('post3.png', 'Статья 3', 'rb-article-item__image'); ?>
-                        <h2 class="rb-article-item__title">Декабрьское поступление товара и актуальные скидки</h2>
-                        <p class="rb-article-item__description">Экономьте на ремонте своего автомобиля, не упуская выгодных возможностей</p>
-                        <p class="rb-article-item__date">2024-01-01</p>
-                    </div>
-                    <?php
                 endif;
                 ?>
             </div>
         </div>
 
-        
-        
         <div class="rb-services">
-            <h1 class="rb-services__title">Акции</h1>
+            <h1 class="rb-services__title">Услуги</h1>
             <div class="rb-services__container">
                 <?php
                 $services = rocketbusiness_get_services(['posts_per_page' => 4]);
@@ -104,42 +81,6 @@ get_header(); ?>
                         <?php
                     endforeach;
                     wp_reset_postdata();
-                else :
-                    ?>
-                    <div class="rb-service-item">
-                        <div class="rb-service-item__image-container">
-                            <?php rocketbusiness_display_image('service1.png', 'Услуга 1', 'rb-service-item__image'); ?>
-                            <p class="rb-service-item__label">Товар месяца</p>
-                        </div>
-                        <h2 class="rb-service-item__title">Настроим цифровую технику в вашем присутствии</h2>
-                        <p class="rb-service-item__price">от 200 ₽</p>
-                    </div>
-                    <div class="rb-service-item">
-                        <div class="rb-service-item__image-container">
-                            <?php rocketbusiness_display_image('service2.jpg', 'Услуга 2', 'rb-service-item__image'); ?>
-                            <p class="rb-service-item__label">Скидка</p>
-                            <p class="rb-service-item__label">Акция</p>
-                        </div>
-                        <h2 class="rb-service-item__title">Настроим цифровую технику в вашем присутствии</h2>
-                        <p class="rb-service-item__price">от 200 ₽</p>
-                    </div>
-                    <div class="rb-service-item">
-                        <div class="rb-service-item__image-container">
-                            <?php rocketbusiness_display_image('service3.jpg', 'Услуга 3', 'rb-service-item__image'); ?>
-                            <p class="rb-service-item__label">Новинка</p>
-                        </div>
-                        <h2 class="rb-service-item__title">Настроим цифровую технику в вашем присутствии</h2>
-                        <p class="rb-service-item__price">от 200 ₽</p>
-                    </div>
-                    <div class="rb-service-item">
-                        <div class="rb-service-item__image-container">
-                            <?php rocketbusiness_display_image('service4.jpg', 'Услуга 4', 'rb-service-item__image'); ?>
-                            <p class="rb-service-item__label">Товар месяца</p>
-                        </div>
-                        <h2 class="rb-service-item__title">Настроим цифровую технику в вашем присутствии</h2>
-                        <p class="rb-service-item__price">от 200 ₽</p>
-                    </div>
-                    <?php
                 endif;
                 ?>
             </div>
