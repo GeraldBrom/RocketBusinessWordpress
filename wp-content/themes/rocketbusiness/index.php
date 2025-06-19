@@ -40,6 +40,47 @@ get_header(); ?>
                         <?php
                     endforeach;
                     wp_reset_postdata();
+                else :
+                    // Fallback контент для статей
+                    $fallback_articles = [
+                        [
+                            'title' => 'Добро пожаловать в RocketBusiness',
+                            'description' => 'Мы рады представить вам нашу компанию и рассказать о том, как мы можем помочь вашему бизнесу расти и развиваться.',
+                            'date' => date('d.m.Y')
+                        ],
+                        [
+                            'title' => 'Наши услуги для бизнеса',
+                            'description' => 'Предлагаем широкий спектр услуг для развития вашего бизнеса: от консультаций до полного сопровождения проектов.',
+                            'date' => date('d.m.Y', strtotime('-1 day'))
+                        ],
+                        [
+                            'title' => 'Почему выбирают нас',
+                            'description' => 'Более 10 лет опыта, индивидуальный подход к каждому клиенту и гарантированный результат - вот что отличает нас от конкурентов.',
+                            'date' => date('d.m.Y', strtotime('-2 days'))
+                        ]
+                    ];
+                    
+                    foreach ($fallback_articles as $article) :
+                        ?>
+                        <div class="rb-article-item">
+                            <div class="rb-article-item__link">
+                                <div class="rb-article-item__image-container">
+                                    <div class="rb-article-item__image-placeholder">
+                                        <svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="300" height="200" fill="#f5f5f5"/>
+                                            <path d="M150 80C166.569 80 180 66.5685 180 50C180 33.4315 166.569 20 150 20C133.431 20 120 33.4315 120 50C120 66.5685 133.431 80 150 80Z" fill="#ddd"/>
+                                            <path d="M100 140L130 110L150 130L170 110L200 140V180H100V140Z" fill="#ddd"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                
+                                <h2 class="rb-article-item__title"><?php echo esc_html($article['title']); ?></h2>
+                                <p class="rb-article-item__description"><?php echo esc_html($article['description']); ?></p>
+                                <p class="rb-article-item__date"><?php echo esc_html($article['date']); ?></p>
+                            </div>
+                        </div>
+                        <?php
+                    endforeach;
                 endif;
                 ?>
             </div>
@@ -81,6 +122,52 @@ get_header(); ?>
                         <?php
                     endforeach;
                     wp_reset_postdata();
+                else :
+                    // Fallback контент для услуг
+                    $fallback_services = [
+                        [
+                            'title' => 'Бизнес-консультации',
+                            'price' => 'от 5 000 ₽',
+                            'label' => 'Популярно'
+                        ],
+                        [
+                            'title' => 'Маркетинговые услуги',
+                            'price' => 'от 15 000 ₽',
+                            'label' => 'Новинка'
+                        ],
+                        [
+                            'title' => 'Разработка стратегии',
+                            'price' => 'от 25 000 ₽',
+                            'label' => 'Топ'
+                        ],
+                        [
+                            'title' => 'Анализ рынка',
+                            'price' => 'от 10 000 ₽',
+                            'label' => 'Акция'
+                        ]
+                    ];
+                    
+                    foreach ($fallback_services as $service) :
+                        ?>
+                        <div class="rb-service-item">
+                            <div class="rb-service-item__link">
+                                <div class="rb-service-item__image-container">
+                                    <div class="rb-service-item__image-placeholder">
+                                        <svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="300" height="200" fill="#f5f5f5"/>
+                                            <circle cx="150" cy="100" r="40" fill="#ddd"/>
+                                            <path d="M140 100L150 90L160 100L150 110L140 100Z" fill="#999"/>
+                                        </svg>
+                                    </div>
+                                    <p class="rb-service-item__label"><?php echo esc_html($service['label']); ?></p>
+                                </div>
+                                
+                                <h2 class="rb-service-item__title"><?php echo esc_html($service['title']); ?></h2>
+                                <p class="rb-service-item__price"><?php echo esc_html($service['price']); ?></p>
+                            </div>
+                        </div>
+                        <?php
+                    endforeach;
                 endif;
                 ?>
             </div>
