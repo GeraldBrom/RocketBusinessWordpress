@@ -1,0 +1,1045 @@
+/*
+Theme Name: Rocket Business
+Description: Тема для тестового задания Rocket Business
+Version: 1.0.0
+Author: Ivan Lavlinskiy
+Author URI: https://github.com/alex-dev-web
+Text Domain: rocketbusiness
+Domain Path: /languages
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 8.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+a {
+    color: #007cba;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #005a87;
+}
+
+/* Layout */
+.rb-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.rb-content__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.rb-content__main {
+    min-width: 0;
+    flex: 1;
+}
+
+/* Page */
+.rb-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Skip link */
+.rb-skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    z-index: 100000;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: top 0.3s ease;
+}
+
+.rb-skip-link:focus {
+    top: 6px;
+}
+
+.rb-screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+/* Header */
+.rb-header {
+    background-color: #A1A1A1;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.rb-header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.rb-header__logo {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+    color: #fff;
+}
+
+.rb-header__logo a {
+    color: white;
+    text-decoration: none;
+}
+.rb-header__logo a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Content */
+.rb-content {
+    flex: 1;
+}
+
+/* Main */
+.rb-main {
+    padding: 2rem 0;
+    min-height: 60vh;
+}
+
+/* Footer */
+.rb-footer {        
+    background: #E6E6E6;
+    color: #000;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    height: 330px;
+}
+
+.rb-footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rb-footer__info {
+    font-size: 1rem;
+    color: #000;
+}
+
+/* Articles */
+.rb-articles {
+    margin-bottom: 4rem;
+}
+
+.rb-articles__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.rb-articles__container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.rb-article-item {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rb-article-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.rb-article-item__image {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.rb-article-item__title {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 1rem 1rem 0.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.rb-article-item__description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    padding: 0 1rem 0.5rem;
+    margin: 0;
+    color: #666;
+}
+
+.rb-article-item__date {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #A1A1A1;
+    padding: 0 1rem 1rem;
+    margin: 0;
+}
+
+/* Services */
+.rb-services {
+    margin-bottom: 4rem;
+}
+
+.rb-services__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.rb-services__container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.rb-service-item {
+    flex: 1;
+    min-width: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #a1a1a15b;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.rb-service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.rb-service-item__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.rb-service-item__image {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.rb-service-item__image-container {
+    position: relative;
+    width: 100%;
+}
+
+.rb-service-item__image-container .rb-service-item__label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 10;
+    margin: 0;
+    margin-right: 2px;
+}
+
+.rb-service-item__image-container .rb-service-item__label:nth-child(3) {
+    top: 10px;
+    left: calc(1px + 90px + 1px);
+}
+
+.rb-service-item__title {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 20px 0 20px;
+    margin: 0;
+    color: #333;
+    flex-grow: 1;
+}
+
+.rb-service-item__price {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    color: #A1A1A1;
+    padding: 20px 20px;
+    margin: 0;
+    margin-top: auto;
+}
+
+/* Page Content */
+.rb-page-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rb-page-content__header {
+    margin-bottom: 2rem;
+}
+
+.rb-page-content__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.rb-page-content__thumbnail {
+    margin-bottom: 2rem;
+}
+
+.rb-page-content__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.rb-page-content__content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.rb-page-content__content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.rb-page-content__content blockquote {
+    border-left: 4px solid #007cba;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+.rb-page-content__links {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+}
+
+/* Single Post */
+.rb-single-post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rb-single-post__header {
+    margin-bottom: 2rem;
+}
+
+.rb-single-post__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.rb-single-post__meta {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.rb-single-post__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.rb-single-post__meta-icon {
+    font-size: 1rem;
+}
+
+.rb-single-post__author-link {
+    color: #007cba;
+    text-decoration: none;
+}
+
+.rb-single-post__author-link:hover {
+    color: #005a87;
+}
+
+.rb-single-post__thumbnail {
+    margin-bottom: 2rem;
+}
+
+.rb-single-post__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.rb-single-post__content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.rb-single-post__content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.rb-single-post__content blockquote {
+    border-left: 4px solid #007cba;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+.rb-single-post__links {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+}
+
+.rb-single-post__footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.rb-single-post__edit-link {
+    color: #007cba;
+    text-decoration: none;
+}
+
+.rb-single-post__edit-link:hover {
+    color: #005a87;
+}
+
+/* Post Navigation */
+.rb-post-navigation {
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.rb-post-navigation__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.rb-post-navigation__prev,
+.rb-post-navigation__next {
+    flex: 1;
+}
+
+.rb-post-navigation__next {
+    text-align: right;
+}
+
+.rb-post-navigation__icon {
+    font-size: 1rem;
+}
+
+/* Error 404 */
+.rb-error-404 {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.rb-error-404__header {
+    margin-bottom: 2rem;
+}
+
+.rb-error-404__title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.rb-error-404__content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rb-error-404__description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.rb-error-404__actions {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.rb-error-404__widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.rb-error-404__widget {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.rb-error-404__widget-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #007cba;
+    color: #333;
+}
+
+.rb-error-404__widget-list {
+    list-style: none;
+}
+
+.rb-error-404__widget-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.rb-error-404__widget-list li:last-child {
+    border-bottom: none;
+}
+
+.rb-error-404__widget-list a {
+    color: #007cba;
+    text-decoration: none;
+}
+
+.rb-error-404__widget-list a:hover {
+    color: #005a87;
+}
+
+/* Buttons */
+.rb-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.rb-btn--primary {
+    background: #007cba;
+    color: #fff;
+}
+
+.rb-btn--primary:hover {
+    background: #005a87;
+    color: #fff;
+}
+
+/* Utilities */
+.rb-text-center { text-align: center; }
+.rb-text-right { text-align: right; }
+.rb-mb-1 { margin-bottom: 0.5rem; }
+.rb-mb-2 { margin-bottom: 1rem; }
+.rb-mb-3 { margin-bottom: 1.5rem; }
+.rb-mb-4 { margin-bottom: 2rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rb-content__wrapper {
+        flex-direction: column;
+    }
+    
+    .rb-header__content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .rb-footer__content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .rb-articles__container {
+        flex-direction: column;
+    }
+    
+    .rb-services__container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding: 0.5rem 0;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .rb-services__container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .rb-service-item {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+        min-width: 280px;
+        margin-right: 0;
+    }
+    
+    .rb-services__dots {
+        display: flex;
+    }
+    
+    .rb-services__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ddd;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 0;
+    }
+    
+    .rb-services__dot.active {
+        background-color: #007cba;
+    }
+    
+    .rb-services__dot:hover {
+        background-color: #007cba;
+    }
+    
+    .rb-error-404__widgets {
+        grid-template-columns: 1fr;
+    }
+    
+    .rb-post-navigation__links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .rb-post-navigation__next {
+        text-align: left;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .rb-single-post__title,
+    .rb-page-content__title,
+    .rb-articles__title,
+    .rb-services__title {
+        font-size: 2rem;
+    }
+}
+
+/* Стили для кастомных типов записей */
+
+/* Одиночная статья */
+.rb-single-article {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rb-single-article__header {
+    margin-bottom: 2rem;
+}
+
+.rb-single-article__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.rb-single-article__meta {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.rb-single-article__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.rb-single-article__meta-icon {
+    font-size: 1rem;
+}
+
+.rb-single-article__thumbnail {
+    margin-bottom: 2rem;
+}
+
+.rb-single-article__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.rb-single-article__content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.rb-single-article__content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.rb-single-article__content blockquote {
+    border-left: 4px solid #007cba;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+.rb-single-article__footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.rb-single-article__edit-link {
+    color: #007cba;
+    text-decoration: none;
+}
+
+.rb-single-article__edit-link:hover {
+    color: #005a87;
+}
+
+/* Одиночная акция */
+.rb-single-service {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rb-single-service__header {
+    margin-bottom: 2rem;
+}
+
+.rb-single-service__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.rb-single-service__meta {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.rb-single-service__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.rb-single-service__meta-icon {
+    font-size: 1rem;
+}
+
+.rb-single-service__thumbnail {
+    margin-bottom: 2rem;
+}
+
+.rb-single-service__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.rb-single-service__content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.rb-single-service__content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.rb-single-service__content blockquote {
+    border-left: 4px solid #007cba;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #666;
+}
+
+.rb-single-service__labels {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.rb-single-service__labels h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.rb-single-service__labels-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.rb-single-service__label {
+    background: #007cba;
+    color: #fff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.rb-single-service__footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.rb-single-service__edit-link {
+    color: #007cba;
+    text-decoration: none;
+}
+
+.rb-single-service__edit-link:hover {
+    color: #005a87;
+}
+
+/* Архивные страницы */
+.rb-archive-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.rb-archive-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.rb-archive-description {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Ссылки на статьи и акции */
+.rb-article-item__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.rb-article-item__link:hover {
+    transform: translateY(-2px);
+}
+
+.rb-service-item__link:hover {
+    transform: translateY(-2px);
+}
+
+/* Мета-информация для статей */
+.rb-article-item__meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.rb-article-item__read-time {
+    font-size: 0.9rem;
+    color: #A1A1A1;
+}
+
+/* Страница без записей */
+.rb-no-posts {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.rb-no-posts h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.rb-no-posts p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.rb-no-posts__actions {
+    margin-top: 2rem;
+}
+
+/* Пагинация */
+.rb-pagination {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.rb-pagination .page-numbers {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.rb-pagination .page-numbers:hover,
+.rb-pagination .page-numbers.current {
+    background: #007cba;
+    color: #fff;
+    border-color: #007cba;
+}
+
+/* Адаптивность для новых элементов */
+@media (max-width: 768px) {
+    .rb-single-article__title,
+    .rb-single-service__title,
+    .rb-archive-title {
+        font-size: 2rem;
+    }
+    
+    .rb-single-article__meta,
+    .rb-single-service__meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .rb-single-service__labels-list {
+        justify-content: center;
+    }
+    
+    .rb-article-item__meta {
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: flex-start;
+    }
+}
+
+/* Точки навигации для слайдера сервисов */
+.rb-services__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.rb-services__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0;
+}
+
+.rb-services__dot.active {
+    background-color: #007cba;
+}
+
+.rb-services__dot:hover {
+    background-color: #007cba;
+}
+

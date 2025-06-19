@@ -1,0 +1,80 @@
+# Translation of Plugins - Database Addon For WPForms ( wpforms entries ) &#8211; WPFormsDB - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Database Addon For WPForms ( wpforms entries ) &#8211; WPFormsDB - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-07-24 01:48:29+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Database Addon For WPForms ( wpforms entries ) &#8211; WPFormsDB - Stable (latest release)\n"
+
+#. Author of the plugin
+#: database-for-wp-forms.php
+msgid "wpdebuglog"
+msgstr "WPDebugLog"
+
+#. translators: 1: Settings URL, 2: Repository url
+#: database-for-wp-forms.php:189
+msgid "Awesome, you've been using <a href=\"admin.php?page=wp-forms-db-list.php\">WPForms DB</a> for more than 1 week. May we ask you to give it a 5-star rating on WordPress? | <a href=\"%2$s\" target=\"_blank\">Ok, you deserved it</a> | <a href=\"%1$s\">I already did</a> | <a href=\"%1$s\">No, not good enough</a>"
+msgstr "Замечательно, вы используете <a href=\"admin.php?page=wp-forms-db-list.php\">WPForms DB</a> уже больше недели. Можем ли мы попросить вас поставить ему 5 звёзд в каталоге плагинов WordPress? | <a href=\"%2$s\" target=\"_blank\">Ok, вы заслужили это</a> | <a href=\"%1$s\">Я уже сделал это</a> | <a href=\"%1$s\">Нет, не думаю</a>."
+
+#: inc/class-sub-page.php:448
+msgid "Apply"
+msgstr "Применить"
+
+#: inc/class-sub-page.php:452
+msgid "Export CSV"
+msgstr "Экспорт CSV"
+
+#. Plugin Name of the plugin
+#: database-for-wp-forms.php
+msgid "Database for WPforms"
+msgstr "База данных для WPforms"
+
+#. Description of the plugin
+#: database-for-wp-forms.php
+msgid "Save and manage WPForms submissions. Never lose important data. Database add-on for WPForms."
+msgstr "Сохраняйте и управляйте отправленными через WPForms данными. Никогда не теряйте важные данные. Расширение базы данных сообщений для WPForms."
+
+#: inc/class-main-page.php:31
+msgid "WPForms Submissions"
+msgstr "Сообщения WPForms"
+
+#: inc/class-main-page.php:31
+msgid "WPForms DB"
+msgstr "БД WPForms"
+
+#: inc/class-main-page.php:71
+msgid "WPForms List"
+msgstr "Список WPForms"
+
+#: inc/class-main-page.php:127
+msgid "Name"
+msgstr "Название"
+
+#: inc/class-main-page.php:128
+msgid "Count"
+msgstr "Счётчик"
+
+#: inc/class-sub-page.php:193
+msgid "Read"
+msgstr "Прочитать"
+
+#: inc/class-sub-page.php:194
+msgid "Unread"
+msgstr "Не прочитано"
+
+#: inc/class-sub-page.php:195
+msgid "Delete"
+msgstr "Удалить"
+
+#: inc/class-sub-page.php:436
+msgid "Select bulk action"
+msgstr "Выберите массовое действие"
+
+#: inc/class-sub-page.php:438
+msgid "Bulk Actions"
+msgstr "Массовые действия"
